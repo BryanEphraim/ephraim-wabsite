@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ephraim - Komunitas Memecoin AI</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #7ef9ff;
+      border-radius: 2px;
+    }
+    nav {
+      display: flex;
+    }
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #1a1a2e;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,255,255,0.1);
+      }
+      nav.show {
+        display: flex;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  
+<header>
+  <div class="logo">Ephraim</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav id="nav">
+    <a href="index.html">Beranda</a>
+    <a href="news.html">Berita</a>
+    <a href="vision.html">Visi & Misi</a>
+    <a href="projects.html">Proyek</a>
+  </nav>
+</header>
+        
+  <section class="hero">
+    <h1>Selamat datang di <span class="highlight">Ephraim</span></h1>
+    <p>Komunitas Memecoin dengan Visi AI Masa Depan</p>
+    <a href="projects.html" class="btn">Lihat Proyek Kami</a>
+  </section>
+  <div id="footer"></div>
+  
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
