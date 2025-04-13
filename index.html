@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ephraim AI Memecoin</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+    .navbar {
+      background-color: #1a1a2e;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      height: 40px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 999;
+      }
+      nav.show {
+        display: flex;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn.secondary {
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <img src="logo.png" alt="Ephraim Logo" class="logo" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="vision.html">Visi Misi</a>
+      <a href="projects.html">Project</a>
+      <a href="news.html">Berita</a>
+    </nav>
+  </header>  <main class="hero">
+    <h1>Welcome to Ephraim</h1>
+    <p>The revolutionary AI-powered memecoin that's changing the game!</p>
+    <p>Join the movement, ride the hype, and be part of the future of fun crypto!</p>
+    <a class="btn" href="https://t.me/+fa6btQKDeiEzZDI1" target="_blank">Join our Telegram</a>
+    <a class="btn secondary" href="https://twitter.com/ephraimcoin" target="_blank">Follow us on Twitter</a>
+  </main>  <footer style="text-align:center; padding: 20px; background-color: #1a1a2e;">
+    <p>&copy; 2025 Ephraim Coin. All rights reserved.</p>
+  </footer>  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('show');
+    }
+  </script></body>
+</html>
